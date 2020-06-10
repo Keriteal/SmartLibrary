@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace SmartLibrary
 {
-    public partial class Form2_regiser2 : Form
+    public partial class RegistDialog : Form
     {
-        public Form2_regiser2()
+        public RegistDialog()
         {
             InitializeComponent();
         }
 
+        private void Form2_regiser_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("修改成功");
+            MessageBox.Show("注册成功");
             this.Close();
         }
     }

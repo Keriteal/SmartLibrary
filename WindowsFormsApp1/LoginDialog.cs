@@ -34,14 +34,14 @@ namespace SmartLibrary
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Form2_regiser f_regiser = new Form2_regiser();
+            RegistDialog f_regiser = new RegistDialog();
             f_regiser.Show(this);
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("登陆成功");
-            login_interface login = new login_interface();
+            MainMenu login = new MainMenu();
             login.Show(this);
         }
     }

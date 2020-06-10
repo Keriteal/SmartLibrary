@@ -1,6 +1,6 @@
 ﻿namespace SmartLibrary
 {
-    partial class Back_Books
+    partial class ReturnBookDialog
     {
         /// <summary>
         /// Required designer variable.

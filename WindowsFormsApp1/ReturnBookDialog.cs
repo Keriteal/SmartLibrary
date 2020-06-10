@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace SmartLibrary
 {
-    public partial class Form_Seats : Form
+    public partial class ReturnBookDialog : Form
     {
-        public Form_Seats()
+        public ReturnBookDialog()
         {
             InitializeComponent();
         }
 
-        private void GroupBox1_Enter(object sender, EventArgs e)
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void Button7_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("预约成功");
-            this.Close();
         }
     }
 }

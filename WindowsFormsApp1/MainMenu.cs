@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SmartLibrary
 {
-    public partial class login_interface : Form
+    public partial class MainMenu : Form
     {
-        public login_interface()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            Form2_regiser f_Regiser = new Form2_regiser();
+            RegistDialog f_Regiser = new RegistDialog();
             f_Regiser.Show(this);
         }
 
@@ -30,25 +30,25 @@ namespace SmartLibrary
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Search s = new Search();
+            BorrowDialog s = new BorrowDialog();
             s.Show(this);
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            Form2_regiser2 f2 = new Form2_regiser2();
+            EditInfoDialog f2 = new EditInfoDialog();
             f2.Show(this);
         }
 
         private void Button4_Click_1(object sender, EventArgs e)
         {
-            Back_Books b = new Back_Books();
+            ReturnBookDialog b = new ReturnBookDialog();
             b.Show(this);
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            Form_Seats S = new Form_Seats();
+            SeatsDialog S = new SeatsDialog();
             S.Show(this);
         }
     }

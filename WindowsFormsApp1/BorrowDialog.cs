@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace SmartLibrary
 {
-    public partial class Form2_regiser : Form
+    public partial class BorrowDialog : Form
     {
-        public Form2_regiser()
+        public BorrowDialog()
         {
             InitializeComponent();
         }
 
-        private void Form2_regiser_Load(object sender, EventArgs e)
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("注册成功");
-            this.Close();
+            MainMenu login = new MainMenu();
+            login.Show(this);
         }
     }
 }

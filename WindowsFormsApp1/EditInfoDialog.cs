@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace SmartLibrary
 {
-    public partial class Search : Form
+    public partial class EditInfoDialog : Form
     {
-        public Search()
+        public EditInfoDialog()
         {
             InitializeComponent();
         }
 
-        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            login_interface login = new login_interface();
-            login.Show(this);
+            MessageBox.Show("修改成功");
+            this.Close();
         }
     }
 }

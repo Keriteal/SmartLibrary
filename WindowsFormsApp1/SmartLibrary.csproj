@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7469A3AD-A674-4499-91F1-6E5F5E6AF4B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <RootNamespace>SmartLibrary</RootNamespace>
+    <AssemblyName>SmartLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,67 +46,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Back_Books.cs">
+    <Compile Include="ReturnBookDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Back_Books.Designer.cs">
-      <DependentUpon>Back_Books.cs</DependentUpon>
+    <Compile Include="ReturnBookDialog.Designer.cs">
+      <DependentUpon>ReturnBookDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1_login.cs">
+    <Compile Include="LoginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1_login.Designer.cs">
-      <DependentUpon>Form1_login.cs</DependentUpon>
+    <Compile Include="LoginDialog.Designer.cs">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2_regiser.cs">
+    <Compile Include="RegistDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2_regiser.Designer.cs">
-      <DependentUpon>Form2_regiser.cs</DependentUpon>
+    <Compile Include="RegistDialog.Designer.cs">
+      <DependentUpon>RegistDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2_regiser2.cs">
+    <Compile Include="EditInfoDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2_regiser2.Designer.cs">
-      <DependentUpon>Form2_regiser2.cs</DependentUpon>
+    <Compile Include="EditInfoDialog.Designer.cs">
+      <DependentUpon>EditInfoDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Seats.cs">
+    <Compile Include="SeatsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Seats.Designer.cs">
-      <DependentUpon>Form_Seats.cs</DependentUpon>
+    <Compile Include="SeatsDialog.Designer.cs">
+      <DependentUpon>SeatsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="login_interface.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login_interface.Designer.cs">
-      <DependentUpon>login_interface.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Search.cs">
+    <Compile Include="BorrowDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Search.Designer.cs">
-      <DependentUpon>Search.cs</DependentUpon>
+    <Compile Include="BorrowDialog.Designer.cs">
+      <DependentUpon>BorrowDialog.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Back_Books.resx">
-      <DependentUpon>Back_Books.cs</DependentUpon>
+    <EmbeddedResource Include="ReturnBookDialog.resx">
+      <DependentUpon>ReturnBookDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1_login.resx">
-      <DependentUpon>Form1_login.cs</DependentUpon>
+    <EmbeddedResource Include="LoginDialog.resx">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2_regiser.resx">
-      <DependentUpon>Form2_regiser.cs</DependentUpon>
+    <EmbeddedResource Include="RegistDialog.resx">
+      <DependentUpon>RegistDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2_regiser2.resx">
-      <DependentUpon>Form2_regiser2.cs</DependentUpon>
+    <EmbeddedResource Include="EditInfoDialog.resx">
+      <DependentUpon>EditInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Seats.resx">
-      <DependentUpon>Form_Seats.cs</DependentUpon>
+    <EmbeddedResource Include="SeatsDialog.resx">
+      <DependentUpon>SeatsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login_interface.resx">
-      <DependentUpon>login_interface.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,8 +118,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Search.resx">
-      <DependentUpon>Search.cs</DependentUpon>
+    <EmbeddedResource Include="BorrowDialog.resx">
+      <DependentUpon>BorrowDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
