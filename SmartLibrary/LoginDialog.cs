@@ -17,32 +17,17 @@ namespace SmartLibrary
             InitializeComponent();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            RegistDialog f_regiser = new RegistDialog();
-            f_regiser.Show(this);
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             MessageBox.Show("登陆成功");
-            MainMenu login = new MainMenu();
-            login.Show(this);
+            Close();
+        }
+
+        private void btnRegist_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new RegistDialog().ShowDialog();
+            Show();
         }
     }
 }

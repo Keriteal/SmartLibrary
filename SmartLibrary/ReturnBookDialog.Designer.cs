@@ -31,10 +31,10 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader_BookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_BookName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_BorrowName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_BorrowTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_State = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_Borrow_Lend = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_Lend = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_Continue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -44,16 +44,17 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader_BookID,
             this.columnHeader_BookName,
-            this.columnHeader_BorrowName,
             this.columnHeader_BorrowTime,
             this.columnHeader_State,
-            this.columnHeader_Borrow_Lend});
+            this.columnHeader_Lend,
+            this.columnHeader_Continue});
             this.listView1.Font = new System.Drawing.Font("华文行楷", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listView1.ForeColor = System.Drawing.SystemColors.Window;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(-4, -2);
+            this.listView1.Location = new System.Drawing.Point(-3, -2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(807, 456);
+            this.listView1.Size = new System.Drawing.Size(606, 366);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -61,19 +62,13 @@
             // columnHeader_BookID
             // 
             this.columnHeader_BookID.Text = "图书编号";
-            this.columnHeader_BookID.Width = 129;
+            this.columnHeader_BookID.Width = 100;
             // 
             // columnHeader_BookName
             // 
             this.columnHeader_BookName.Text = "图书名称";
             this.columnHeader_BookName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader_BookName.Width = 129;
-            // 
-            // columnHeader_BorrowName
-            // 
-            this.columnHeader_BorrowName.Text = "借阅人名字";
-            this.columnHeader_BorrowName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader_BorrowName.Width = 151;
+            this.columnHeader_BookName.Width = 100;
             // 
             // columnHeader_BorrowTime
             // 
@@ -87,21 +82,26 @@
             this.columnHeader_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader_State.Width = 128;
             // 
-            // columnHeader_Borrow_Lend
+            // columnHeader_Lend
             // 
-            this.columnHeader_Borrow_Lend.Text = "";
-            this.columnHeader_Borrow_Lend.Width = 131;
+            this.columnHeader_Lend.Text = "归还";
+            this.columnHeader_Lend.Width = 131;
             // 
-            // Back_Books
+            // columnHeader_Continue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.columnHeader_Continue.Text = "续借";
+            // 
+            // ReturnBookDialog
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 360);
             this.Controls.Add(this.listView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Back_Books";
-            this.Text = "Back_Books";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "ReturnBookDialog";
+            this.Text = "借阅管理";
             this.ResumeLayout(false);
 
         }
@@ -111,9 +111,9 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader_BookID;
         private System.Windows.Forms.ColumnHeader columnHeader_BookName;
-        private System.Windows.Forms.ColumnHeader columnHeader_BorrowName;
         private System.Windows.Forms.ColumnHeader columnHeader_BorrowTime;
         private System.Windows.Forms.ColumnHeader columnHeader_State;
-        private System.Windows.Forms.ColumnHeader columnHeader_Borrow_Lend;
+        private System.Windows.Forms.ColumnHeader columnHeader_Lend;
+        private System.Windows.Forms.ColumnHeader columnHeader_Continue;
     }
 }
