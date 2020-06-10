@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryAPI
+namespace MyMysql
 {
-    public class UserAPi
+    public class MySql
     {
     }
 }

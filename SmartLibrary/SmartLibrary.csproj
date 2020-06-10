@@ -146,5 +146,11 @@
   <ItemGroup>
     <None Include="Resources\timg9DJUG54M.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryAPI\LibraryAPI.csproj">
+      <Project>{b7730720-f3cd-4d73-ac66-4cfbfc0b29b0}</Project>
+      <Name>LibraryAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

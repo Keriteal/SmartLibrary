@@ -30,51 +30,51 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageReader = new System.Windows.Forms.TabPage();
+            this.tabPageAdmin = new System.Windows.Forms.TabPage();
             this.btnLend = new System.Windows.Forms.Button();
             this.btnToEdit = new System.Windows.Forms.Button();
             this.btnBorrow = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnPreorder = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageReader.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(73, 61);
+            this.tabControl1.Controls.Add(this.tabPageReader);
+            this.tabControl1.Controls.Add(this.tabPageAdmin);
+            this.tabControl1.Location = new System.Drawing.Point(35, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(608, 386);
             this.tabControl1.TabIndex = 7;
             // 
-            // tabPage1
+            // tabPageReader
             // 
-            this.tabPage1.Controls.Add(this.btnPreorder);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.btnLend);
-            this.tabPage1.Controls.Add(this.btnToEdit);
-            this.tabPage1.Controls.Add(this.btnBorrow);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(600, 360);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageReader.Controls.Add(this.btnPreorder);
+            this.tabPageReader.Controls.Add(this.groupBox1);
+            this.tabPageReader.Controls.Add(this.btnLend);
+            this.tabPageReader.Controls.Add(this.btnToEdit);
+            this.tabPageReader.Controls.Add(this.btnBorrow);
+            this.tabPageReader.Location = new System.Drawing.Point(4, 22);
+            this.tabPageReader.Name = "tabPageReader";
+            this.tabPageReader.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageReader.Size = new System.Drawing.Size(600, 360);
+            this.tabPageReader.TabIndex = 0;
+            this.tabPageReader.Text = "tabPage1";
+            this.tabPageReader.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPageAdmin
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(600, 360);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageAdmin.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAdmin.Name = "tabPageAdmin";
+            this.tabPageAdmin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAdmin.Size = new System.Drawing.Size(600, 360);
+            this.tabPageAdmin.TabIndex = 1;
+            this.tabPageAdmin.Text = "tabPage2";
+            this.tabPageAdmin.UseVisualStyleBackColor = true;
             // 
             // btnLend
             // 
@@ -83,7 +83,7 @@
             this.btnLend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLend.DialogResult = System.Windows.Forms.DialogResult.Ignore;
             this.btnLend.Font = new System.Drawing.Font("华文行楷", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnLend.Location = new System.Drawing.Point(306, 194);
+            this.btnLend.Location = new System.Drawing.Point(321, 28);
             this.btnLend.Margin = new System.Windows.Forms.Padding(2);
             this.btnLend.Name = "btnLend";
             this.btnLend.Size = new System.Drawing.Size(86, 48);
@@ -99,7 +99,7 @@
             this.btnToEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnToEdit.DialogResult = System.Windows.Forms.DialogResult.Ignore;
             this.btnToEdit.Font = new System.Drawing.Font("华文行楷", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnToEdit.Location = new System.Drawing.Point(358, 87);
+            this.btnToEdit.Location = new System.Drawing.Point(279, 279);
             this.btnToEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnToEdit.Name = "btnToEdit";
             this.btnToEdit.Size = new System.Drawing.Size(108, 58);
@@ -114,7 +114,7 @@
             this.btnBorrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBorrow.DialogResult = System.Windows.Forms.DialogResult.Ignore;
             this.btnBorrow.Font = new System.Drawing.Font("华文行楷", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnBorrow.Location = new System.Drawing.Point(453, 184);
+            this.btnBorrow.Location = new System.Drawing.Point(477, 61);
             this.btnBorrow.Margin = new System.Windows.Forms.Padding(2);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(86, 48);
@@ -143,7 +143,7 @@
             this.btnPreorder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPreorder.DialogResult = System.Windows.Forms.DialogResult.Ignore;
             this.btnPreorder.Font = new System.Drawing.Font("华文行楷", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPreorder.Location = new System.Drawing.Point(358, 274);
+            this.btnPreorder.Location = new System.Drawing.Point(409, 172);
             this.btnPreorder.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreorder.Name = "btnPreorder";
             this.btnPreorder.Size = new System.Drawing.Size(108, 58);
@@ -168,7 +168,7 @@
             this.Text = " 主菜單";
             this.Load += new System.EventHandler(this.Login_interface_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPageReader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -176,12 +176,12 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageReader;
         private System.Windows.Forms.Button btnPreorder;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLend;
         private System.Windows.Forms.Button btnToEdit;
         private System.Windows.Forms.Button btnBorrow;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageAdmin;
     }
 }
