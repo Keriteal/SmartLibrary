@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace SmartLibrary
 {
     partial class Back_Books
     {
