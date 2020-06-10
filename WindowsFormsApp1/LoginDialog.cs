@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SmartLibrary
 {
-    public partial class Form1 : Form
+    public partial class LoginDialog : Form
     {
-        public Form1()
+        public LoginDialog()
         {
             InitializeComponent();
         }

@@ -12,44 +12,37 @@ namespace SmartLibrary
 {
     public partial class MainMenu : Form
     {
+        string userid = "";
         public MainMenu()
         {
             InitializeComponent();
         }
 
-        private void Button4_Click(object sender, EventArgs e)
-        {
-            RegistDialog f_Regiser = new RegistDialog();
-            f_Regiser.Show(this);
-        }
-
         private void Login_interface_Load(object sender, EventArgs e)
         {
+            Hide();
+            new LoginDialog().ShowDialog();
+            Show();
+        }
+
+        private void btnLend_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnBorrow_Click(object sender, EventArgs e)
         {
-            BorrowDialog s = new BorrowDialog();
-            s.Show(this);
+
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private void btnPreorder_Click(object sender, EventArgs e)
         {
-            EditInfoDialog f2 = new EditInfoDialog();
-            f2.Show(this);
+
         }
 
-        private void Button4_Click_1(object sender, EventArgs e)
+        private void btnToEdit_Click(object sender, EventArgs e)
         {
-            ReturnBookDialog b = new ReturnBookDialog();
-            b.Show(this);
-        }
 
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            SeatsDialog S = new SeatsDialog();
-            S.Show(this);
         }
     }
 }
