@@ -44,21 +44,21 @@
             this.DatabaseUser.Location = new System.Drawing.Point(163, 48);
             this.DatabaseUser.Name = "DatabaseUser";
             this.DatabaseUser.Size = new System.Drawing.Size(100, 21);
-            this.DatabaseUser.TabIndex = 0;
+            this.DatabaseUser.TabIndex = 1;
             // 
             // DatabaseNewPasswd
             // 
             this.DatabaseNewPasswd.Location = new System.Drawing.Point(163, 75);
             this.DatabaseNewPasswd.Name = "DatabaseNewPasswd";
             this.DatabaseNewPasswd.Size = new System.Drawing.Size(100, 21);
-            this.DatabaseNewPasswd.TabIndex = 2;
+            this.DatabaseNewPasswd.TabIndex = 0;
             // 
             // DatabaseHost
             // 
             this.DatabaseHost.Location = new System.Drawing.Point(163, 21);
             this.DatabaseHost.Name = "DatabaseHost";
             this.DatabaseHost.Size = new System.Drawing.Size(100, 21);
-            this.DatabaseHost.TabIndex = 3;
+            this.DatabaseHost.TabIndex = 2;
             // 
             // button1
             // 
@@ -111,10 +111,11 @@
             this.DatabasePort.Location = new System.Drawing.Point(292, 21);
             this.DatabasePort.Name = "DatabasePort";
             this.DatabasePort.Size = new System.Drawing.Size(48, 21);
-            this.DatabasePort.TabIndex = 9;
+            this.DatabasePort.TabIndex = 3;
             // 
             // SettingsDialog
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 145);
@@ -127,6 +128,9 @@
             this.Controls.Add(this.DatabaseHost);
             this.Controls.Add(this.DatabaseNewPasswd);
             this.Controls.Add(this.DatabaseUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SettingsDialog";
             this.Text = "设置";
             this.Load += new System.EventHandler(this.SettingsDialog_Load);

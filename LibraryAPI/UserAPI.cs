@@ -79,6 +79,11 @@ WHERE userid = {userid}";
         }
         #endregion
 
+        public static DataTable GetAllUsers(MyMySql sql_users)
+        {
+            return sql_users.executeQuery(@"SELECT * FROM users");
+        }
+
         #region UserInfo
         public class UserInfo
         {

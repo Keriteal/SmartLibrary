@@ -34,14 +34,14 @@ namespace SmartLibrary
                 {
                     if ((Controls["groupBox1"].Controls[$"radio{i}_{j}"] as RadioButton).Checked)
                     {
-                        SelectedSeat = i.ToString();
-                        SelectedDesk = j.ToString();
+                        SelectedDesk = i.ToString();
+                        SelectedSeat = j.ToString();
                         break;
                     }
                 }
             }
 
-            if (SeatAPI.Order(Program.seats, Room, SelectedDesk, SelectedSeat, Program.userinfo.userid))
+            if (SeatAPI.Order(Program.other, Room, SelectedDesk, SelectedSeat, Program.userinfo.userid))
             {
                 MessageBox.Show("预约成功");
                 Close();
@@ -64,7 +64,7 @@ namespace SmartLibrary
                 }
             }
             string Room = comboBox1.Text;
-            DataTable dt = SeatAPI.getUnAviliableSeats(Program.seats, Room);
+            DataTable dt = SeatAPI.getUnAviliableSeats(Program.other, Room);
             if (dt != null)
             {
                 foreach (DataRow row in dt.Rows)

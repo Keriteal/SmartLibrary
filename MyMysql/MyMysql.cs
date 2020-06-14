@@ -62,7 +62,7 @@ namespace MyMysql
         public DataTable executeQuery(string sqlstr)
         {
             Console.WriteLine(sqlstr);
-            DataTable table = new DataTable();
+            DataTable table = null;
             try
             {
                 if (connection == null)
@@ -70,7 +70,8 @@ namespace MyMysql
                     connection = new MySqlConnection(getConnectionString());
                 }
                 connection.Open();
-                MySqlDataAdapter adapter = new MySqlDataAdapter(sqlstr, this.connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sqlstr, connection);
+                table = new DataTable();
                 adapter.Fill(table);
             }
             catch (Exception ex)

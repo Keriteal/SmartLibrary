@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="BookAPI.cs" />
     <Compile Include="EncryptionUtils.cs" />
+    <Compile Include="LectureAPI.cs" />
     <Compile Include="SeatAPI.cs" />
     <Compile Include="UserAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

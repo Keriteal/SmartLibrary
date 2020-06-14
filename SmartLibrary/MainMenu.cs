@@ -13,7 +13,7 @@ namespace SmartLibrary
 
         private void Login_interface_Load(object sender, EventArgs e)
         {
-            if(Util.Read("dbuser").Equals("") || Util.Read("dbpass").Equals(""))
+            if (Util.Read("dbuser").Equals("") || Util.Read("dbpass").Equals(""))
             {
                 Hide();
                 new SettingsDialog().ShowDialog();
@@ -38,14 +38,32 @@ namespace SmartLibrary
 
         private void btnPreorder_Click(object sender, EventArgs e)
         {
-            // 预约
-            new SeatsDialog().Show(this);
+            SeatAPI.SeatInfo seatinfo= SeatAPI.GetSeatByUser(Program.other, Program.userinfo.userid);
+            // 预约座位
+            if (seatinfo.roomid == null)
+            {
+                new SeatsDialog().Show(this);
+            }
+            else
+            {
+                if(MessageBox.Show("是否退订？","已存在预定的记录", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if(SeatAPI.Leave(Program.other, seatinfo.roomid, seatinfo.deskid, seatinfo.seatid))
+                    {
+                        MessageBox.Show("退订成功");
+                    }
+                    else
+                    {
+                        MessageBox.Show("退订失败");
+                    }
+                }
+            }
         }
 
         public void onGetUserInfo(UserAPI.UserInfo userinfo)
         {
             Console.WriteLine(userinfo.type);
-            if(userinfo.type == UserAPI.USER_TYPE.ADMIN)
+            if (userinfo.type == UserAPI.USER_TYPE.ADMIN)
             {
                 tabControl1.SelectedIndex = 1;
             }
@@ -68,6 +86,28 @@ namespace SmartLibrary
                     return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new SettingsDialog().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new LectureManager().ShowDialog(this);
+        }
+
+        private void BookManage_Click(object sender, EventArgs e)
+        {
+            new BookManager().ShowDialog(this);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new LoginDialog().ShowDialog(this);
+            Show();
         }
     }
 }

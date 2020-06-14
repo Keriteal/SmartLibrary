@@ -42,8 +42,7 @@ namespace SmartLibrary
             string dbuser = Util.Read("dbuser");
             string dbpass = EncryptionUtils.aesDecryptBase64(Util.Read("dbpass"), EncryptionUtils.DEFAULT_KEY);
             Program.books = new MyMySql(database: "smartlib_books", dbpass, username: dbuser);
-            Program.lecture = new MyMySql(database: "smartlib_lecture", dbpass, username: dbuser);
-            Program.seats = new MyMySql(database: "smartlib_seats", dbpass, username: dbuser);
+            Program.other = new MyMySql(database: "smartlib_other", dbpass, username: dbuser);
             Program.users = new MyMySql(database: "smartlib_users", dbpass, username: dbuser);
         }
 
@@ -53,6 +52,11 @@ namespace SmartLibrary
             {
                 Application.Exit();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new SettingsDialog().ShowDialog(this);
         }
     }
 }

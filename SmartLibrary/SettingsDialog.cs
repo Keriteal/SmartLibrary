@@ -13,6 +13,8 @@ namespace SmartLibrary
 
         private void SettingsDialog_Load(object sender, EventArgs e)
         {
+            DatabaseHost.Text = Util.Read("dbhost");
+            DatabasePort.Text = Util.Read("dbport");
             DatabaseUser.Text = Util.Read("dbuser");
         }
 

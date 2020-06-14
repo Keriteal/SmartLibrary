@@ -49,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookManager.Designer.cs">
+      <DependentUpon>BookManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LectureInfo.Designer.cs">
+      <DependentUpon>LectureInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LectureManager.Designer.cs">
+      <DependentUpon>LectureManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReturnBookDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +117,12 @@
     <Compile Include="SettingsDialog.Designer.cs">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BookManager.resx">
+      <DependentUpon>BookManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureInfo.resx">
+      <DependentUpon>LectureInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReturnBookDialog.resx">
       <DependentUpon>ReturnBookDialog.cs</DependentUpon>
     </EmbeddedResource>

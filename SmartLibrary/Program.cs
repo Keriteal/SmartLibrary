@@ -9,8 +9,7 @@ namespace SmartLibrary
     {
         public static MyMySql books;
         public static MyMySql users;
-        public static MyMySql seats;
-        public static MyMySql lecture;
+        public static MyMySql other;
         public static UserAPI.UserInfo userinfo;
         /// <summary>
         /// 应用程序的主入口点。
