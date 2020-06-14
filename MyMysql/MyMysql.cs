@@ -106,6 +106,32 @@ namespace MyMysql
             return null;
         }
         #endregion
+        #region 获取单条 executeQueryFirst
+        public DataRow executeQueryFirst(string sqlstr)
+        {
+            Console.WriteLine(sqlstr);
+            DataTable table = new DataTable();
+            try
+            {
+                if (connection == null)
+                {
+                    connection = new MySqlConnection(getConnectionString());
+                }
+                connection.Open();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sqlstr, this.connection);
+                adapter.Fill(table);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                TryClose();
+            }
+            return table.Rows.Count == 0? null : table.Rows[0];
+        }
+        #endregion
 
         #region TryClose
         public void TryClose()

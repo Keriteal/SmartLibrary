@@ -1,10 +1,25 @@
 ﻿using MySql.Data.MySqlClient;
 using MyMysql;
+using System.Data;
 
 namespace LibraryAPI
 {
     static public class UserAPI
     {
+        public struct UserDescription
+        {
+            public UserDescription(string username, string passwd, int sex, string contact)
+            {
+                this.username = username;
+                this.passwd = passwd;
+                this.sex = sex;
+                this.contact = contact;
+            }
+            string username;
+            string passwd;
+            int sex;
+            string contact;
+        }
         public enum USER_TYPE
         {
             READER, ADMIN, INVAILD
@@ -45,19 +60,30 @@ namespace LibraryAPI
                 (password.Equals("") ? "" : $"password = '{passwd.ToUpper()}'") +
                 $"WHERE userid = {userid}";
             int result = mysql.executeNonQuery(SQLstr);
-            if(result != 1)
+            if (result != 1)
             {
                 return false;
             }
             return true;
         }
         #endregion
+        #region 获取用户信息
+        public static UserDescription GetUserDescription(MyMySql sql , string userid)
+        {
+            string sqlstr = $@"
+SELECT username, userpassword, sex, contact
+FROM users
+WHERE userid = {userid}";
+            DataRow row = sql.executeQueryFirst(sqlstr);
+            return new UserDescription(row["username"].ToString(), row["password"].ToString(), int.Parse(row["sex"].ToString()), row["contact"].ToString());
+        }
+        #endregion
 
         #region UserInfo
         public class UserInfo
         {
-            public string userid;
-            public USER_TYPE type;
+            public readonly string userid;
+            public readonly USER_TYPE type;
             public UserInfo(string userid, UserAPI.USER_TYPE type)
             {
                 this.userid = userid;
