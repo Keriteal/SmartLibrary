@@ -32,9 +32,6 @@
             this.columnHeader_BookID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_BookName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_BorrowTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_State = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_Lend = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_Continue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -44,20 +41,20 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader_BookID,
             this.columnHeader_BookName,
-            this.columnHeader_BorrowTime,
-            this.columnHeader_State,
-            this.columnHeader_Lend,
-            this.columnHeader_Continue});
+            this.columnHeader_BorrowTime});
             this.listView1.Font = new System.Drawing.Font("华文行楷", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.listView1.ForeColor = System.Drawing.SystemColors.Window;
+            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(-3, -2);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(606, 366);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // columnHeader_BookID
             // 
@@ -76,21 +73,6 @@
             this.columnHeader_BorrowTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader_BorrowTime.Width = 144;
             // 
-            // columnHeader_State
-            // 
-            this.columnHeader_State.Text = "借阅状态";
-            this.columnHeader_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader_State.Width = 128;
-            // 
-            // columnHeader_Lend
-            // 
-            this.columnHeader_Lend.Text = "归还";
-            this.columnHeader_Lend.Width = 131;
-            // 
-            // columnHeader_Continue
-            // 
-            this.columnHeader_Continue.Text = "续借";
-            // 
             // ReturnBookDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -99,9 +81,10 @@
             this.ClientSize = new System.Drawing.Size(600, 360);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReturnBookDialog";
             this.Text = "借阅管理";
+            this.Load += new System.EventHandler(this.ReturnBookDialog_Load);
             this.ResumeLayout(false);
 
         }
@@ -112,8 +95,5 @@
         private System.Windows.Forms.ColumnHeader columnHeader_BookID;
         private System.Windows.Forms.ColumnHeader columnHeader_BookName;
         private System.Windows.Forms.ColumnHeader columnHeader_BorrowTime;
-        private System.Windows.Forms.ColumnHeader columnHeader_State;
-        private System.Windows.Forms.ColumnHeader columnHeader_Lend;
-        private System.Windows.Forms.ColumnHeader columnHeader_Continue;
     }
 }

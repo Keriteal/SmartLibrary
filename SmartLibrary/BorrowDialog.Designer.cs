@@ -77,6 +77,8 @@
             this.columnHeader3,
             this.columnHeader4});
             this.listView1.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(442, 37);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
@@ -137,6 +139,8 @@
             this.column_book_author,
             this.column_book_count});
             this.listView2.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(15, 37);
             this.listView2.Margin = new System.Windows.Forms.Padding(2);

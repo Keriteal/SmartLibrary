@@ -27,17 +27,19 @@ namespace SmartLibrary
         private void btnLend_Click(object sender, EventArgs e)
         {
             // 还书
+            new ReturnBookDialog().ShowDialog(this);
         }
 
         private void btnBorrow_Click(object sender, EventArgs e)
         {
             // 借书
+            new BorrowDialog().ShowDialog(this);
         }
 
         private void btnPreorder_Click(object sender, EventArgs e)
         {
             // 预约
-            new SeatsDialog().Show();
+            new SeatsDialog().Show(this);
         }
 
         public void onGetUserInfo(UserAPI.UserInfo userinfo)
