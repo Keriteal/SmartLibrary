@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginDialog));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserName = new System.Windows.Forms.TextBox();
+            this.UserPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -62,27 +62,27 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "密码";
             // 
-            // textBox1
+            // UserName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("隶书", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(230, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 33);
-            this.textBox1.TabIndex = 4;
+            this.UserName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.UserName.Font = new System.Drawing.Font("隶书", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.UserName.Location = new System.Drawing.Point(230, 22);
+            this.UserName.Margin = new System.Windows.Forms.Padding(2);
+            this.UserName.Multiline = true;
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(188, 33);
+            this.UserName.TabIndex = 4;
             // 
-            // textBox2
+            // UserPassword
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Font = new System.Drawing.Font("隶书", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(230, 82);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 33);
-            this.textBox2.TabIndex = 5;
+            this.UserPassword.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.UserPassword.Font = new System.Drawing.Font("隶书", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.UserPassword.Location = new System.Drawing.Point(230, 82);
+            this.UserPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.UserPassword.Multiline = true;
+            this.UserPassword.Name = "UserPassword";
+            this.UserPassword.Size = new System.Drawing.Size(188, 33);
+            this.UserPassword.TabIndex = 5;
             // 
             // label1
             // 
@@ -102,9 +102,9 @@
             this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.Menu;
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.UserPassword);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.UserName);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-14, 107);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -158,6 +158,8 @@
             this.MinimizeBox = false;
             this.Name = "LoginDialog";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginDialog_FormClosed);
+            this.Load += new System.EventHandler(this.LoginDialog_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -168,8 +170,8 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UserName;
+        private System.Windows.Forms.TextBox UserPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegist;

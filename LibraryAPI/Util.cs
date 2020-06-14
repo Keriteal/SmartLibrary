@@ -1,34 +1,18 @@
 ﻿using System;
-using System.Security.Cryptography;
 using System.Text;
 using Microsoft.Win32;
 
 namespace LibraryAPI
 {
-    static class Util
+    public static class Util
     {
-        static public string getMD5(string str)
-        {
-            var result = "";
-            using (MD5 md5hash = MD5.Create())
-            {
-                byte[] data = md5hash.ComputeHash(Encoding.UTF8.GetBytes(str));
-                StringBuilder sBuilder = new StringBuilder();
-                for (int i = 0; i < data.Length; i++)
-                {
-                    sBuilder.Append(data[i].ToString("x2"));
-                }
-                result = sBuilder.ToString();
-            }
-            return result;
-        }
-
+        #region 注册表读取
         static public string Read(string key)
         {
             string result = "";
             try
             {
-                RegistryKey reg_key = Registry.CurrentUser.CreateSubKey(@"SoftWare/SmartLibrary");
+                RegistryKey reg_key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\SmartLibrary");
                 var obj = reg_key.GetValue(key);
                 if (obj != null)
                 {
@@ -41,5 +25,22 @@ namespace LibraryAPI
             }
             return result;
         }
+        #endregion
+        #region 注册表写入
+        static public bool Write(string key, string value)
+        {
+            try
+            {
+                RegistryKey reg_key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\SmartLibrary");
+                reg_key.SetValue(key, value);
+                return true;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+        #endregion
     }
 }

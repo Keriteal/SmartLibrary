@@ -93,6 +93,12 @@
     <Compile Include="BorrowDialog.Designer.cs">
       <DependentUpon>BorrowDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ReturnBookDialog.resx">
       <DependentUpon>ReturnBookDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +130,9 @@
     <EmbeddedResource Include="BorrowDialog.resx">
       <DependentUpon>BorrowDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,6 +159,10 @@
     <ProjectReference Include="..\LibraryAPI\LibraryAPI.csproj">
       <Project>{b7730720-f3cd-4d73-ac66-4cfbfc0b29b0}</Project>
       <Name>LibraryAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyMysql\MyMysql.csproj">
+      <Project>{A371F8CF-2DF9-4340-9627-647B798C380F}</Project>
+      <Name>MyMysql</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

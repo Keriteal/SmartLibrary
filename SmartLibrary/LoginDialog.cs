@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibraryAPI;
+using MyMysql;
 
 namespace SmartLibrary
 {
     public partial class LoginDialog : Form
     {
+        bool isLogedIn = false;
         public LoginDialog()
         {
             InitializeComponent();
@@ -19,8 +15,19 @@ namespace SmartLibrary
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("登陆成功");
-            Close();
+            UserAPI.UserInfo info = UserAPI.Confirm(UserName.Text, UserPassword.Text, Program.users);
+            if (info.type != UserAPI.USER_TYPE.INVAILD)
+            {
+                Program.userinfo = info;
+                ((MainMenu)Owner).onGetUserInfo(info);
+                MessageBox.Show("登陆成功");
+                isLogedIn = true;
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("错误");
+            }
         }
 
         private void btnRegist_Click(object sender, EventArgs e)
@@ -28,6 +35,24 @@ namespace SmartLibrary
             Hide();
             new RegistDialog().ShowDialog();
             Show();
+        }
+
+        private void LoginDialog_Load(object sender, EventArgs e)
+        {
+            string dbuser = Util.Read("dbuser");
+            string dbpass = EncryptionUtils.aesDecryptBase64(Util.Read("dbpass"), EncryptionUtils.DEFAULT_KEY);
+            Program.books = new MyMySql(database: "smartlib_books", dbpass, username: dbuser);
+            Program.lecture = new MyMySql(database: "smartlib_lecture", dbpass, username: dbuser);
+            Program.seats = new MyMySql(database: "smartlib_seats", dbpass, username: dbuser);
+            Program.users = new MyMySql(database: "smartlib_users", dbpass, username: dbuser);
+        }
+
+        private void LoginDialog_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!isLogedIn)
+            {
+                Application.Exit();
+            }
         }
     }
 }
