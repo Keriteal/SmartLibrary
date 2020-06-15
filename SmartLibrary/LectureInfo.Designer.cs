@@ -38,7 +38,8 @@
             // lectureName
             // 
             this.lectureName.AutoSize = true;
-            this.lectureName.Location = new System.Drawing.Point(27, 16);
+            this.lectureName.Location = new System.Drawing.Point(6, 6);
+            this.lectureName.Margin = new System.Windows.Forms.Padding(6);
             this.lectureName.Name = "lectureName";
             this.lectureName.Size = new System.Drawing.Size(29, 12);
             this.lectureName.TabIndex = 0;
@@ -46,19 +47,18 @@
             // 
             // lectureDescription
             // 
-            this.lectureDescription.AutoSize = true;
-            this.lectureDescription.Location = new System.Drawing.Point(27, 50);
+            this.lectureDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lectureDescription.Location = new System.Drawing.Point(10, 27);
+            this.lectureDescription.Margin = new System.Windows.Forms.Padding(10, 3, 10, 0);
             this.lectureDescription.Name = "lectureDescription";
-            this.lectureDescription.Size = new System.Drawing.Size(71, 12);
+            this.lectureDescription.Size = new System.Drawing.Size(121, 39);
             this.lectureDescription.TabIndex = 1;
             this.lectureDescription.Text = "description";
             // 
             // TimeStart
             // 
-            this.TimeStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TimeStart.AutoSize = true;
-            this.TimeStart.Location = new System.Drawing.Point(41, 121);
+            this.TimeStart.Location = new System.Drawing.Point(6, 78);
             this.TimeStart.Name = "TimeStart";
             this.TimeStart.Size = new System.Drawing.Size(101, 12);
             this.TimeStart.TabIndex = 2;
@@ -67,7 +67,8 @@
             // TimeEnd
             // 
             this.TimeEnd.AutoSize = true;
-            this.TimeEnd.Location = new System.Drawing.Point(171, 121);
+            this.TimeEnd.Location = new System.Drawing.Point(6, 106);
+            this.TimeEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 0);
             this.TimeEnd.Name = "TimeEnd";
             this.TimeEnd.Size = new System.Drawing.Size(101, 12);
             this.TimeEnd.TabIndex = 3;
@@ -76,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(148, 121);
+            this.label3.Location = new System.Drawing.Point(6, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 12);
             this.label3.TabIndex = 4;
@@ -84,15 +85,17 @@
             // 
             // LectureInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TimeEnd);
             this.Controls.Add(this.TimeStart);
             this.Controls.Add(this.lectureDescription);
             this.Controls.Add(this.lectureName);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "LectureInfo";
-            this.Size = new System.Drawing.Size(304, 150);
+            this.Size = new System.Drawing.Size(141, 121);
             this.Load += new System.EventHandler(this.LectureInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

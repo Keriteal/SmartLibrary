@@ -1,11 +1,15 @@
 ﻿using LibraryAPI;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace SmartLibrary
 {
     public partial class MainMenu : Form
     {
+        List<LectureInfo> lectures = new List<LectureInfo>();
         public MainMenu()
         {
             InitializeComponent();
@@ -51,6 +55,7 @@ namespace SmartLibrary
                     if(SeatAPI.Leave(Program.other, seatinfo.roomid, seatinfo.deskid, seatinfo.seatid))
                     {
                         MessageBox.Show("退订成功");
+                        new SeatsDialog().Show(this);
                     }
                     else
                     {
@@ -70,6 +75,7 @@ namespace SmartLibrary
             else
             {
                 tabControl1.SelectedIndex = 0;
+                LoadLectures();
             }
         }
 
@@ -108,6 +114,19 @@ namespace SmartLibrary
             Hide();
             new LoginDialog().ShowDialog(this);
             Show();
+        }
+
+        private void LoadLectures()
+        {
+            DataTable dt = LectureAPI.GetLectuer(Program.other);
+            flowLayoutPanel1.SuspendLayout();
+            foreach(DataRow row in dt.Rows)
+            {
+                LectureInfo item = new LectureInfo(row["lecturename"].ToString(), row["lecturedescription"].ToString(), row["releasedatetime"].ToString(), row["outdatedatetime"].ToString());
+                flowLayoutPanel1.Controls.Add(item);
+            }
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.AutoScroll = true;
         }
     }
 }

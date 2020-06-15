@@ -35,7 +35,7 @@
             this.tabPageReader = new System.Windows.Forms.TabPage();
             this.btnPreorder = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnLend = new System.Windows.Forms.Button();
             this.btnToEdit = new System.Windows.Forms.Button();
             this.btnBorrow = new System.Windows.Forms.Button();
@@ -119,7 +119,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
             this.groupBox1.Font = new System.Drawing.Font("华文楷体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -130,14 +130,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "公告";
             // 
-            // listView1
+            // flowLayoutPanel1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(18, 35);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(199, 280);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(29, 43);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(190, 278);
+            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // btnLend
             // 
@@ -260,7 +260,6 @@
         private System.Windows.Forms.TabPage tabPageReader;
         private System.Windows.Forms.Button btnPreorder;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btnLend;
         private System.Windows.Forms.Button btnToEdit;
         private System.Windows.Forms.Button btnBorrow;
@@ -268,5 +267,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BookManage;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
