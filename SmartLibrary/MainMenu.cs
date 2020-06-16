@@ -9,7 +9,6 @@ namespace SmartLibrary
 {
     public partial class MainMenu : Form
     {
-        List<LectureInfo> lectures = new List<LectureInfo>();
         public MainMenu()
         {
             InitializeComponent();
@@ -127,6 +126,11 @@ namespace SmartLibrary
             }
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.AutoScroll = true;
+        }
+
+        private void UserManage_Click(object sender, EventArgs e)
+        {
+            new UserManager().ShowDialog(this);
         }
     }
 }

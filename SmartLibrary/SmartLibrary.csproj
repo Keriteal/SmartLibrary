@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookEditAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookEditAddDialog.Designer.cs">
+      <DependentUpon>BookEditAddDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,15 @@
     <Compile Include="SettingsDialog.Designer.cs">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BookEditAddDialog.resx">
+      <DependentUpon>BookEditAddDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookManager.resx">
       <DependentUpon>BookManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsDialog.resx">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -40,8 +40,8 @@
             this.btnToEdit = new System.Windows.Forms.Button();
             this.btnBorrow = new System.Windows.Forms.Button();
             this.tabPageAdmin = new System.Windows.Forms.TabPage();
+            this.UserManage = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.BookManage = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -78,10 +78,10 @@
             this.tabControl1.Controls.Add(this.tabPageReader);
             this.tabControl1.Controls.Add(this.tabPageAdmin);
             this.tabControl1.ItemSize = new System.Drawing.Size(20, 20);
-            this.tabControl1.Location = new System.Drawing.Point(-4, 1);
+            this.tabControl1.Location = new System.Drawing.Point(-4, -24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(612, 384);
+            this.tabControl1.Size = new System.Drawing.Size(612, 407);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
             // 
@@ -95,7 +95,7 @@
             this.tabPageReader.Location = new System.Drawing.Point(4, 24);
             this.tabPageReader.Name = "tabPageReader";
             this.tabPageReader.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageReader.Size = new System.Drawing.Size(604, 356);
+            this.tabPageReader.Size = new System.Drawing.Size(604, 379);
             this.tabPageReader.TabIndex = 0;
             this.tabPageReader.UseVisualStyleBackColor = true;
             // 
@@ -190,33 +190,35 @@
             // 
             // tabPageAdmin
             // 
+            this.tabPageAdmin.Controls.Add(this.UserManage);
             this.tabPageAdmin.Controls.Add(this.button2);
-            this.tabPageAdmin.Controls.Add(this.button1);
             this.tabPageAdmin.Controls.Add(this.BookManage);
             this.tabPageAdmin.Location = new System.Drawing.Point(4, 24);
             this.tabPageAdmin.Name = "tabPageAdmin";
             this.tabPageAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAdmin.Size = new System.Drawing.Size(604, 356);
+            this.tabPageAdmin.Size = new System.Drawing.Size(604, 377);
             this.tabPageAdmin.TabIndex = 1;
             this.tabPageAdmin.UseVisualStyleBackColor = true;
             // 
+            // UserManage
+            // 
+            this.UserManage.Location = new System.Drawing.Point(101, 56);
+            this.UserManage.Name = "UserManage";
+            this.UserManage.Size = new System.Drawing.Size(85, 45);
+            this.UserManage.TabIndex = 3;
+            this.UserManage.Text = "用户管理";
+            this.UserManage.UseVisualStyleBackColor = true;
+            this.UserManage.Click += new System.EventHandler(this.UserManage_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(101, 6);
+            this.button2.Location = new System.Drawing.Point(513, 306);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 44);
             this.button2.TabIndex = 2;
             this.button2.Text = "数据库连接设置";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 44);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "公告管理";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // BookManage
             // 
@@ -226,6 +228,7 @@
             this.BookManage.TabIndex = 0;
             this.BookManage.Text = "书本管理";
             this.BookManage.UseVisualStyleBackColor = true;
+            this.BookManage.Click += new System.EventHandler(this.BookManage_Click);
             // 
             // MainMenu
             // 
@@ -265,8 +268,8 @@
         private System.Windows.Forms.Button btnBorrow;
         private System.Windows.Forms.TabPage tabPageAdmin;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BookManage;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button UserManage;
     }
 }

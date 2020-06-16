@@ -22,6 +22,10 @@ namespace SmartLibrary
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("提交", "", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
             List<string> bookids = new List<string>();
             // 提交
             foreach (ListViewItem listViewItem in listView1.Items)

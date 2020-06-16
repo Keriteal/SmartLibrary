@@ -101,6 +101,14 @@ WHERE userid = {userid}";
         }
         #endregion
 
+        #region 修改用户权限
+        public static bool ChangePrivillege(MyMySql sql, string userid, string privillege)
+        {
+            string SQLstr = $@"
+UPDATE users SET userprivillege = {privillege} WHERE userid = {userid}";
+            return sql.executeNonQuery(SQLstr) == 1;
+        }
+        #endregion
         public static DataTable GetAllUsers(MyMySql sql_users)
         {
             return sql_users.executeQuery(@"SELECT * FROM users");
